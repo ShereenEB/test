@@ -1,4 +1,5 @@
-	// DebugOff ()
+PennController.ResetPrefix(null);  // Initiates PennController
+// DebugOff ()
 	
 
 	// Show the 'intro' trial first, then all the 'experiment' trials in a random order
