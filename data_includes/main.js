@@ -3,8 +3,28 @@
 
 	// Show the 'intro' trial first, then all the 'experiment' trials in a random order
 	// then send the results and finally show the trial labeled 'bye'
-	Sequence (  
-	"fam_block" ) ;
+	Sequence (  "intro_iD", "fam_block" ) ;
+
+
+	Template ( GetTable ( "intro_id.csv" ) ,
+	    iid  =>
+	    newTrial ( "intro_iD" ,
+	        defaultText
+	            . print ( )
+	        ,
+	        newText ( "instr_1" ,  iid . line1 )
+	            . css ( "text-decoration" , "underline" )
+	            . print ( )
+	        ,
+	        newButton ( "instr_button" ,  "Continue" )
+	            . center ( )
+	            . size ( 100 ,  30 )
+	            . css ( "border" ,  "solid 5px white" )
+	            . print ( )
+	            . wait ( )
+	    )
+	) ;
+	
 
 
 	Template ( GetTable ( "fam_block_test.csv" ) ,
