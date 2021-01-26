@@ -3,12 +3,12 @@
 
 	// Show the 'intro' trial first, then all the 'experiment' trials in a random order
 	// then send the results and finally show the trial labeled 'bye'
-Sequence("intro_iD", 
+Sequence("intro_ID", 
 	 "fam_block");
 
-	Template ( GetTable ( "intro_id.csv" ) ,
+	Template ( GetTable ( "intro_ID.csv" ) ,
 	    iid  =>
-	    newTrial ( "intro_iD" ,
+	    newTrial ( "intro_ID" ,
 	        defaultText
 	            . print ( )
 	        ,
